@@ -11,23 +11,69 @@
   \setCJKmonofont{Source Han Sans HW TC}
   \renewcommand{\familydefault}{\sfdefault}
 
-\usepackage{xcolor}
-\usepackage{enumitem}
-  \setlist[itemize]{label={>}, leftmargin=2em, nosep, itemsep=0em}
-\usepackage[hidelinks]{hyperref}
+\usepackage{tikz} % 圖案繪製
+\usepackage{eso-pic} % 頁面背景圖案
+\usepackage{xcolor} % 顏色定義
+\usepackage{enumitem} % 列表樣式設定
+  \setlist[itemize]{label={>} , leftmargin=2em, nosep, itemsep=0em}
+\usepackage[hidelinks]{hyperref} % 超連結
 
-\newcommand{\CJKdash}{{\addCJKfontfeatures{CharacterWidth=Full}⸺}}
-\newenvironment{myproblem}[1]{
-    \noindent\textbf{問題：}
+% region 主內容背景樣式設定
+\definecolor{themeOrange}{RGB}{248, 166, 145}
+\definecolor{themeTextOnOrange}{RGB}{0, 0, 0}
+\definecolor{themeWhite}{RGB}{255, 255, 255}
+\definecolor{themeTextOnWhite}{RGB}{0, 0, 0}
+\definecolor{themeBlack}{RGB}{0, 0, 0}
+\definecolor{themeTextOnBlack}{RGB}{255, 255, 255}
+\newif\ifInProblemMode
+\InProblemModefalse
+\newif\ifInSolutionMode
+\InSolutionModefalse
+% \newcommand{\activeThemeColor}{}
+\NewDocumentCommand{\activeThemeColor}{}{}
+\AddToShipoutPictureBG{
+  \begin{tikzpicture}[remember picture, overlay]
+    \ifInProblemMode
+      \fill[\activeThemeColor](current page.south west) rectangle (current page.north east);
+      \ifodd\value{page}
+        \fill[white]([xshift=-8mm] current page.north east) rectangle (current page.south east);
+      \else
+        \fill[white](current page.north west) rectangle ([xshift=8mm] current page.south west);
+      \fi
+    \fi
+    \ifInSolutionMode
+      \fill[white](current page.south west) rectangle (current page.north east);
+      \ifodd\value{page}
+        \fill[\activeThemeColor]([xshift=-8mm] current page.north east) rectangle (current page.south east);
+      \else
+        \fill[\activeThemeColor](current page.north west) rectangle ([xshift=8mm] current page.south west);
+      \fi
+    \fi
+  \end{tikzpicture}
+}
+% endregion
 
-    {\large #1}
+% \newcommand{\CJKdash}{{\addCJKfontfeatures{CharacterWidth=Full}⸺}}
+\NewDocumentCommand{\CJKdash}{}{{\addCJKfontfeatures{CharacterWidth=Full}⸺}}
+% \newenvironment{myproblem}[3][Black]{
+\NewDocumentEnvironment{myproblem}{O{Black}mm}{
+    \InProblemModetrue\InSolutionModefalse
+    \renewcommand{\activeThemeColor}{theme#1}\color{themeTextOn#1}
+    % \RenewDocumentCommand{\activeThemeColor}{}{theme#1}\color{themeTextOn#1}
+    \chapter{#2}
+    \noindent\textbf{\huge 問題：}
 
-  }{\clearpage}
-\newenvironment{mysolution}{
+    {\Large #3}
+
+  }{\clearpage\InProblemModefalse}
+% \newenvironment{mysolution}{
+\NewDocumentEnvironment{mysolution}{O{Black}}{
+    \InSolutionModetrue\InProblemModefalse
+    \renewcommand{\activeThemeColor}{theme#1}
+    % \RenewDocumentCommand{\activeThemeColor}{}{theme#1}
     \noindent\null\textbf{解決方案：}
 
-  }{\clearpage}
-
+  }{\clearpage\InSolutionModefalse}
 
 \title{創作音樂：電子音樂製作人的74個創意策略}
 \author{Dennis DeSantis}
@@ -101,12 +147,10 @@
 
 \part{起始時的問題}
 
-\chapter{三種起手方式}
-
-\begin{myproblem}{You’re staring into the void of a new empty project in your DAW, and you have absolutely no idea how to begin.}
+\begin{myproblem}[Orange]{三種起手方式}{You’re staring into the void of a new empty project in your DAW, and you have absolutely no idea how to begin.}
 好！
 \end{myproblem}
-\begin{mysolution}
+\begin{mysolution}[Orange]
 壞。
 \end{mysolution}
 
