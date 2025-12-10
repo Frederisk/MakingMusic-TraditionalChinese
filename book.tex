@@ -9,6 +9,7 @@
   \setCJKmainfont{Source Han Serif TC}
   \setCJKsansfont{Source Han Sans TC}
   \setCJKmonofont{Source Han Sans HW TC}
+  \renewcommand{\familydefault}{\sfdefault}
 
 \usepackage{xcolor}
 \usepackage{enumitem}
@@ -16,6 +17,17 @@
 \usepackage[hidelinks]{hyperref}
 
 \newcommand{\CJKdash}{{\addCJKfontfeatures{CharacterWidth=Full}⸺}}
+\newenvironment{myproblem}[1]{
+    \noindent\textbf{問題：}
+
+    {\large #1}
+
+  }{\clearpage}
+\newenvironment{mysolution}{
+    \noindent\null\textbf{解決方案：}
+
+  }{\clearpage}
+
 
 \title{創作音樂：電子音樂製作人的74個創意策略}
 \author{Dennis DeSantis}
@@ -70,7 +82,7 @@
 
 這些模式本身是根據特定音樂上的問題在創作過程當中可能出現在的階段來分組的。其包括了：
 \begin{itemize}
-  \item 起始時的問體。這些問題會完全阻礙你，導致你無法開始創作，這類問題包括有缺乏靈感、無法將腦中構想的聲音實現出來等。解決方案方面則包括培養更好主動聆聽能力的練習，以及探索各種玩轉聲音、和聲、旋律、節奏以及音樂形式的方法。
+  \item 起始時的問題。這些問題會完全阻礙你，導致你無法開始創作，這類問題包括有缺乏靈感、無法將腦中構想的聲音實現出來等。解決方案方面則包括培養更好主動聆聽能力的練習，以及探索各種玩轉聲音、和聲、旋律、節奏以及音樂形式的方法。
   \item 過程中的問題。這是創作中最常見到的障礙，一般發生在完成了某些部分但是離結束尚早的時侯，問題包括了疲勞、素材的開發與變化等。解決方案包括有對產生新素材的練習、歌曲結構的塑造、創作流動性的維持。
   \item 收尾時的問題。當你覺得一切近乎完成（但還是差一點點），但是又沒法滿意收官的時候便會遇到此方面的問題。解決方案包括有創造果敢編排和有力結尾的一些主意。
 \end{itemize}
@@ -79,6 +91,26 @@
 
 包括書籍、課程、影片教學、軟體文件和私人教學老師在內，學習音樂技術和音樂製作的途徑早已是數不勝數。我也同樣極力支持這些資源並且鼓勵對這本書感興趣的讀者善用這些途徑。不過所有的這些資源都幾乎全部聚焦在技術或者製作這方面，而不是在音樂本身這方面。《創作音樂》正是為那些已經在技術層面已經掌握了基本的音樂製作方法，但是仍對創作過程感到步履維艱的人（我猜這適用於你我在內的所有人！\null{}）所寫的。
 
+\textbf{最後……}
+
+這本書不會教你如何使用壓縮器、可編碼合成器或者是製出完美的鼓聲，這類的音樂製作技巧已有大量的專門書籍詳細描述。本書將做的事情是引導你運用這些工具去創作，並且特別會著重於解決音樂難題和持續進步，以及完成你的創作（這也是最為關鍵的部分）。
+
+我期待《創作音樂》可以為你帶來啟發，但我更希望能夠啟發你的是你運用這些模式所創作的出的音樂本身。《創作音樂》並非是泛泛其談的格言合輯，其真正意義在於將關於音樂創作哲學與心理學的激勵理念與各類音樂人的實用工具技巧相結合，以此助你真正完成創作。
 
 \tableofcontents
+
+\part{起始時的問題}
+
+\chapter{三種起手方式}
+
+\begin{myproblem}{You’re staring into the void of a new empty project in your DAW, and you have absolutely no idea how to begin.}
+好！
+\end{myproblem}
+\begin{mysolution}
+壞。
+\end{mysolution}
+
+\chapter{其他}
+
+
 \end{document}
