@@ -6,10 +6,12 @@
   \setmonofont{Source Han Sans HW TC}
   % \setmonofont{Source Code Pro}
 \usepackage{xeCJK}
-  \setCJKmainfont{Source Han Serif TC}
-  \setCJKsansfont{Source Han Sans TC}
-  \setCJKmonofont{Source Han Sans HW TC}
+  \xeCJKsetup{PunctStyle=quanjiao}
+  \setCJKmainfont{Source Han Serif TC}[Language=Chinese Traditional]
+  \setCJKsansfont{Source Han Sans TC}[Language=Chinese Traditional]
+  \setCJKmonofont{Source Han Sans HW TC}[Language=Chinese Traditional]
   \renewcommand{\familydefault}{\sfdefault}
+  \xeCJKEditPunctStyle{quanjiao}{optimize-kerning = true}
 
 \usepackage{tikz} % 圖案繪製
 \usepackage{eso-pic} % 頁面背景圖案
@@ -135,7 +137,7 @@
 
 \textbf{為何需用此書？}
 
-包括書籍、課程、影片教學、軟體文件和私人教學老師在內，學習音樂技術和音樂製作的途徑早已是數不勝數。我也同樣極力支持這些資源並且鼓勵對這本書感興趣的讀者善用這些途徑。不過所有的這些資源都幾乎全部聚焦在技術或者製作這方面，而不是在音樂本身這方面。《創作音樂》正是為那些已經在技術層面已經掌握了基本的音樂製作方法，但是仍對創作過程感到步履維艱的人（我猜這適用於你我在內的所有人！\null{}）所寫的。
+包括書籍、課程、影片教學、軟體文件和私人教學老師在內，學習音樂技術和音樂製作的途徑早已是數不勝數。我也同樣極力支持這些資源並且鼓勵對這本書感興趣的讀者善用這些途徑。不過所有的這些資源都幾乎全部聚焦在技術或者製作這方面，而不是在音樂本身這方面。《創作音樂》正是為那些已經在技術層面已經掌握了基本的音樂製作方法，但是仍對創作過程感到步履維艱的人（我猜這適用於你我在內的所有人！）所寫的。
 
 \textbf{最後……}
 
@@ -147,8 +149,10 @@
 
 \part{起始時的問題}
 
-\begin{myproblem}[Orange]{三種起手方式}{You’re staring into the void of a new empty project in your DAW, and you have absolutely no idea how to begin.}
-好！
+\begin{myproblem}[Orange]{三種起手方式}{你正凝視著DAW中那個嶄新而又空蕩蕩的專案，但完全不知道如何開始著手。}
+在創作環境中，空白一片的狀態或許是創作環境中最令人生畏的時候。在我們進入創作的狀態之中時，靈感往往接連湧出，但在毫無頭緒之時，所有的選擇都是一種可能，這反而導致你我難以抉擇。一步步來（第X頁）無疑是一種推進的方式，但推進應該從哪一步開始呢？當你一無所有的時候，即便是單單這一步也會變得像是無法逾越的障礙。
+
+一個看似簡單的答案是：「怎樣開始無關緊要，關鍵在於要行動as無關緊要，關鍵在於行動！」作為體育運動的
 \end{myproblem}
 \begin{mysolution}[Orange]
 壞。
