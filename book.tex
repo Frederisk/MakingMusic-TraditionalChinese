@@ -1,4 +1,4 @@
-\documentclass[a4paper, fontset=none, UTF8]{ctexbook}
+\documentclass[a4paper,fontset=none,UTF8]{ctexbook}
 
 \usepackage{fontspec}
   \setmainfont{Libertinus Serif}
@@ -11,22 +11,24 @@
   \setCJKsansfont{Source Han Sans TC}[Language=Chinese Traditional]
   \setCJKmonofont{Source Han Sans HW TC}[Language=Chinese Traditional]
   \renewcommand{\familydefault}{\sfdefault}
-  \xeCJKEditPunctStyle{quanjiao}{optimize-kerning = true}
+  \xeCJKEditPunctStyle{quanjiao}{optimize-kerning=true}
 
 \usepackage{tikz} % 圖案繪製
 \usepackage{eso-pic} % 頁面背景圖案
 \usepackage{xcolor} % 顏色定義
 \usepackage{enumitem} % 列表樣式設定
-  \setlist[itemize]{label={>} , leftmargin=2em, nosep, itemsep=0em}
+  \setlist[itemize,enumerate]{leftmargin=2em,nosep,itemsep=0em}
+  \setlist[itemize]{label={>}}
+  \setlist[enumerate]{label={\arabic*.}}
 \usepackage[hidelinks]{hyperref} % 超連結
 
 % region 主內容背景樣式設定
-\definecolor{themeOrange}{RGB}{248, 166, 145}
-\definecolor{themeTextOnOrange}{RGB}{0, 0, 0}
-\definecolor{themeWhite}{RGB}{255, 255, 255}
-\definecolor{themeTextOnWhite}{RGB}{0, 0, 0}
-\definecolor{themeBlack}{RGB}{0, 0, 0}
-\definecolor{themeTextOnBlack}{RGB}{255, 255, 255}
+\definecolor{themeOrange}{RGB}{248,166,145}
+\definecolor{themeTextOnOrange}{RGB}{0,0,0}
+\definecolor{themeWhite}{RGB}{255,255,255}
+\definecolor{themeTextOnWhite}{RGB}{0,0,0}
+\definecolor{themeBlack}{RGB}{0,0,0}
+\definecolor{themeTextOnBlack}{RGB}{255,255,255}
 \newif\ifInProblemMode
 \InProblemModefalse
 \newif\ifInSolutionMode
@@ -34,7 +36,7 @@
 % \newcommand{\activeThemeColor}{}
 \NewDocumentCommand{\activeThemeColor}{}{}
 \AddToShipoutPictureBG{
-  \begin{tikzpicture}[remember picture, overlay]
+  \begin{tikzpicture}[remember picture,overlay]
     \ifInProblemMode
       \fill[\activeThemeColor](current page.south west) rectangle (current page.north east);
       \ifodd\value{page}
@@ -152,7 +154,13 @@
 \begin{myproblem}[Orange]{三種起手方式}{你正凝視著DAW中那個嶄新而又空蕩蕩的專案，但完全不知道如何開始著手。}
 在創作環境中，空白一片的狀態或許是創作環境中最令人生畏的時候。在我們進入創作的狀態之中時，靈感往往接連湧出，但在毫無頭緒之時，所有的選擇都是一種可能，這反而導致你我難以抉擇。一步步來（第X頁）無疑是一種推進的方式，但推進應該從哪一步開始呢？當你一無所有的時候，即便是單單這一步也會變得像是無法逾越的障礙。
 
-一個看似簡單的答案是：「怎樣開始無關緊要，關鍵在於要行動as無關緊要，關鍵在於行動！」作為體育運動的
+一個看似簡單的答案是：「怎樣開始無關緊要，關鍵在於要行動as無關緊要，關鍵在於行動！」這句話作為體育運動的口號而言或許十分適合，但對於創作性質的工作而言過於輕率敷衍，從而缺乏實際的指導意義\CJKdash{}畢竟在這個領域而言，可以直接行動去做的事物可以說是無窮無盡的，而且前進的路徑也不是那樣顯而易見。所以在這兒，我提供有三點可以使你從零開始的實用建議：
+
+\begin{enumerate}
+  \item \textbf{從基礎開始。}在多數音樂類型中，我們可以將類如貝斯、鼓組的低音或是純節奏樂器視作音樂的「基底」層，然後再在此基礎上向上逐步疊加音高更高的樂器而作成的。從底層開始構築可以為後續所有元素奠定概念和音樂基礎。鼓組通常承擔核心節拍功能，而貝斯則透過音符定義和錨定和弦進行。即便是著手於那些捨棄了傳統樂器的實驗性曲風，這種可視作基礎的元素仍會存在。比方說持續的低鳴聲層，或者是類如重複節奏的聲響。
+  \item \textbf{從你聽到的開始。}許多音樂人沒有或者說幾乎沒有過即興的音樂靈感\CJKdash{}他們的所有音樂作品皆來自主動創作。若你幸運地在自己腦海中聽見了自己的原創音樂構想，務必將其作為自身創作的根基。這種構想舉例比如有自己反覆哼唱旋律的想法，或是在桌上敲出的鼓點節奏。這些靈感雖然並非是在創作途中產生，但完全不應該就因此而棄置。相反，這類偶然的靈光一現往往會是最有趣的創意想法。
+\end{enumerate}
+
 \end{myproblem}
 \begin{mysolution}[Orange]
 壞。
