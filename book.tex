@@ -1,4 +1,4 @@
-\documentclass[a4paper,fontset=none,UTF8]{ctexbook}
+\documentclass[a4paper,twoside,openany,fontset=none,UTF8]{ctexbook}
 
 \usepackage{fontspec}
   \setmainfont{Libertinus Serif}
@@ -12,6 +12,9 @@
   \setCJKmonofont{Source Han Sans HW TC}[Language=Chinese Traditional]
   \renewcommand{\familydefault}{\sfdefault}
   \xeCJKEditPunctStyle{quanjiao}{optimize-kerning=true}
+  \ctexset{
+    part/pagestyle=empty
+  }
 
 \usepackage[headheight=28pt]{geometry}
 \usepackage{tikz} % 圖案繪製
@@ -24,14 +27,17 @@
 \usepackage[hidelinks]{hyperref} % 超連結
 \usepackage{fancyhdr}
   \usepackage{extramarks}
-  \pagestyle{fancy}
   \fancyhf{}
   \renewcommand{\partmark}[1]{\markboth{#1}{}}
   \renewcommand{\chaptermark}[1]{\markright{#1}}
-  \newcommand{\activeHeadAccentColor}{black}
+  \renewcommand{\headrulewidth}{0pt}
   \fancyhead[LE,RO]{\small{\color{\lastleftxmark}\leftmark}\\\rightmark}
   \extramarks{black}{ignored}
   \fancyfoot[LE,RO]{\thepage}
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[LE,RO]{\thepage}
+  }
 
 % region 主內容背景樣式設定
 \definecolor{themeOrange}{RGB}{248,166,145}
@@ -94,7 +100,23 @@
 \author{Dennis DeSantis}
 
 \begin{document}
+\pagestyle{empty}
 \maketitle
+
+\clearpage
+\null\vfill
+{\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}
+\hyperlink{https://www.ableton.com}{www.ableton.com}\\
+保留所有權利。
+
+Ableton AG 出版\\
+Schönhauser Allee 6-7\\
+10119 Berlin, Germany
+
+原版書籍ISBN：978-3-9817165-0-4
+}
+
+\clearpage
 
 \begin{center}
   獻給 Alison 和 Cecilia，\\
@@ -102,7 +124,9 @@
 \end{center}
 \clearpage
 
-\chapter{序言}
+\chapter*{序言}\thispagestyle{empty}\addcontentsline{toc}{chapter}{序言}
+% \frontmatter\chapter{序言}
+\clearpage
 
 \textbf{這本書講了甚麼？}
 
@@ -158,9 +182,9 @@
 
 我期待《創作音樂》可以為你帶來啟發，但我更希望能夠啟發你的是你運用這些模式所創作的出的音樂本身。《創作音樂》並非是泛泛其談的格言合輯，其真正意義在於將關於音樂創作哲學與心理學的激勵理念與各類音樂人的實用工具技巧相結合，以此助你真正完成創作。
 
-\tableofcontents
-
-\part{起始時的問題}
+\tableofcontents\thispagestyle{empty}
+\pagestyle{fancy}
+{\pagecolor{themeOrange}\part{起始時的問題}}
 
 \begin{myproblem}[Orange]{三種起手方式}{你正凝視著DAW中那個嶄新而又空蕩蕩的專案，但完全不知道如何開始著手。}
 在創作環境中，空白一片的狀態或許是創作環境中最令人生畏的時候。在我們進入創作的狀態之中時，靈感往往接連湧出，但在毫無頭緒之時，所有的選擇都是一種可能，這反而導致你我難以抉擇。「一步步來」這一章中（第X頁）提到的無疑也是一種推進的方式，但推進應該從哪一步開始呢？當你一無所有的時候，即便是單單這一步也會變得像是無法逾越的障礙。
