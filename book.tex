@@ -17,16 +17,15 @@
   }
 
 \usepackage[headheight=28pt]{geometry}
+% \usepackage{multicol}
 \usepackage{tikz} % 圖案繪製
 \usepackage{eso-pic} % 頁面背景圖案
 \usepackage{xcolor} % 顏色定義
 \usepackage{enumitem} % 列表樣式設定
-  \setlist[itemize,enumerate]{leftmargin=2em,nosep,itemsep=0em}
-  \setlist[itemize]{label={>}}
-  \setlist[enumerate]{label={\arabic*.}}
-\usepackage[hidelinks]{hyperref} % 超連結
-\usepackage{fancyhdr}
-  \usepackage{extramarks}
+  \setlist[itemize]{leftmargin=2em,nosep,itemsep=0em,label={>}}
+  \setlist[enumerate]{leftmargin=2em,nosep,itemsep=0em,label={\arabic*.}}
+\usepackage[hidelinks,pdfusetitle]{hyperref} % 超連結
+\usepackage{fancyhdr,extramarks}
   \fancyhf{}
   \renewcommand{\partmark}[1]{\markboth{#1}{}}
   \renewcommand{\chaptermark}[1]{\markright{#1}}
@@ -128,6 +127,9 @@ Schönhauser Allee 6-7\\
 % \frontmatter\chapter{序言}
 \clearpage
 
+% \begin{multicols}{2}
+% \raggedcolumns\null
+%\null\vfill\columnbreak
 \textbf{這本書講了甚麼？}
 
 對於很多藝術家而言，除了創作藝術以外，沒有甚麼更能引發對存在感的恐懼了。那種自己不夠好或者自己知識不足的恐懼導致了無數創作上的危機並使的許多潛在的傑作無法問世。
@@ -147,6 +149,7 @@ Schönhauser Allee 6-7\\
   \item 透過實例，有時輔以其他模式參考，來深入解析方案。
 \end{itemize}
 
+%\vfill\null\columnbreak
 \textbf{此書面向誰？}
 
 若你在使用電腦創作原創音樂，並且為如何完成音樂專案而感到苦惱，那《創作音樂》就是為你而寫的。雖然書中探討的許多模式可調整應用於其他音樂創作類型（例如為搖滾樂團或弦樂四重奏譜曲），但此書的目標是為了解決那些和機器設備打交道的人遇到的特定問題，而並非和樂器打交道的或者其他人士。
@@ -181,6 +184,7 @@ Schönhauser Allee 6-7\\
 這本書不會教你如何使用壓縮器、可編碼合成器或者是製出完美的鼓聲，這類的音樂製作技巧已有大量的專門書籍詳細描述。本書將做的事情是引導你運用這些工具去創作，並且特別會著重於解決音樂難題和持續進步，以及完成你的創作（這也是最為關鍵的部分）。
 
 我期待《創作音樂》可以為你帶來啟發，但我更希望能夠啟發你的是你運用這些模式所創作的出的音樂本身。《創作音樂》並非是泛泛其談的格言合輯，其真正意義在於將關於音樂創作哲學與心理學的激勵理念與各類音樂人的實用工具技巧相結合，以此助你真正完成創作。
+% \end{multicols}
 
 \tableofcontents\thispagestyle{empty}
 \pagestyle{fancy}
@@ -204,7 +208,17 @@ Schönhauser Allee 6-7\\
 不過遺憾的是，這些問題並沒有所謂的「正確」答案。先放過客觀上的法律問題不談，每位藝術家都需自行釐清在借鑒他人作品時能接受的適當度。不過確實也存在一些策略來既能讓你的創作融入靈感的「精隨」，又能強制你創作出的是新的作品。其中的一種方式就是寫一份特質清單。
 \end{myproblem}
 \begin{mysolution}[Orange]
+仔細反覆地聆聽那首激發了你靈感的樂曲（也就是「源」），逐層逐個剖析直至你可以完整寫出一份它的特質清單。當清單趨向完備後，將原曲先放在一旁，並僅以此清單為模板來創作你自己的新作品（也即「目標」）。
 
+考量一下聲音、和聲、旋律、節奏與曲式等的種種特質，針對每項特質具體描述出你所聽到的內容。如果你熟悉用一些樂譜記號的話也可在這個清單中適度運用，但要適度，因為你的目標是為了捕捉原始素材的脈絡和框架，包括那些令人受啟發的方面，但絕不是簡單去拷貝。你最終的得到的產出應當是描述性的文字，而不是單純把樂譜轉錄一遍。
+
+這份清單的詳細程度取決於很多方面：將聽聞內容轉化為文字的能力、原始內容的深度與複雜性、為此投入的時間長短等等。這個清單的關鍵點不在於它具體程度到底有多少，而是它是否能夠提供足夠的內容供你自己運用，也就是在創作過程中不再需要再次參考原始的材料。
+
+一份簡單的特質清單大致上會長這樣子：
+
+\begin{itemize}
+  \item 122 bpm
+\end{itemize}
 \end{mysolution}
 
 \end{document}
