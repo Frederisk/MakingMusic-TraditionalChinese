@@ -13,3 +13,32 @@
 命令：`latexmk -synctex=1 -interaction=nonstopmode -file-line-error -xelatex book.tex`
 
 理論也可透過 `XeLaTeX`->`BibTeX`->`XeLaTeX` 的方式構建。
+
+## 翻譯參考
+
+| 英文 | 中文 | 備註 |
+| --- | --- | --- |
+| musician | 音樂人 | 書中所指涉一般為流行音樂作家，所以常使用此稱呼，會視上下文切換為「音樂家」 |
+| Intro | 前奏 | |
+| Verse | 主歌 | |
+| Pre-Chorus | 導歌 | |
+| Chorus | 副歌 | |
+| Hook | 記憶點 | 或者「鉤子」 |
+| Breakdown | 過門 | 或者「崩潰段落」 |
+| Interlude | 間奏 | |
+| Bridge | 橋段 | |
+| Solo | 獨奏 | |
+| Outro | 尾奏 | |
+| Movement | 樂章 | |
+| Coda | 尾聲 | |
+| Bar / Measure | 小節 | |
+| sound | 聲音 | |
+| harmony | 和聲 | |
+| melody | 旋律 | |
+| rhythm | 節奏 | |
+| form | 曲式 | |
+| style | 風格 | |
+| genre | 流派 | |
+| house | house | 浩室 |
+| techno | techno | 科技舞曲 |
+| trance | trance | 迷幻舞曲 |
